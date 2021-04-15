@@ -7,16 +7,34 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "axios": "0.18.0",
+    "body-parser": "1.18.3",
+    "concurrently": "4.0.1",
+    "cors": "2.8.4",
+    "css-loader": "^5.2.1",
+    "express": "4.16.3",
+    "history": "4.7.2",
+    "md5": "^2.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.3",
-    "react-scripts": "4.0.3"
+    "react-router": "^5.2.0",
+    "react-router-dom": "4.3.1",
+    "react-scripts": "4.0.3",
+    "redux-logger": "3.0.6",
+    "redux-saga": "0.16.2",
+    "uuid": "^8.3.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "webpack",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "webpack-deb-server --open",
+    "test-connect": "babel-node src/server/connect",
+    "initialize": "babel-node src/server/initialize",
+    "server": "babel-node src/server/server",
+    "start-dev": "concurrently \"yarn start server\" \"yarn start dev\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,5 +50,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "mongodb": "3.1.10",
+    "webpack": "^5.33.2",
+    "webpack-cli": "^4.6.0"
   }
 }
